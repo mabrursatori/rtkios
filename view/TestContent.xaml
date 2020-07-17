@@ -1,0 +1,79 @@
+﻿<UserControl x:Class="rtkios.view.TestContent"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+              xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+             xmlns:local="clr-namespace:rtkios.view"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="1100">
+    <Grid>
+        <materialDesign:Card x:Name="GridCard" Width="1050" Height="630">
+        <Grid Height="630" Width="1050">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="740"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+                <Grid Grid.Row="0" Background="Orange" Grid.ColumnSpan="2">
+                    <TextBlock Margin="10" FontSize="14">Daftar Hadir Pegawai <TextBlock FontWeight="Bold">Rabu, 24 Juni 2020</TextBlock></TextBlock>
+                </Grid>
+            <Grid Grid.Row="1">
+            <DataGrid Name="dgUsers" AutoGenerateColumns="False" Width="730" Height="550" HorizontalAlignment="Right">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="No" Binding="{Binding Id}" />
+                    <DataGridTextColumn Header="PIN" Binding="{Binding Pin}" />
+                    <DataGridTextColumn Header="Full Name" Binding="{Binding Name}" Width="350"/>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" />
+                    <DataGridTextColumn Header="Time" Binding="{Binding Time}" />
+                    <DataGridTextColumn Header="Status" Binding="{Binding Status}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1">
+                <materialDesign:Card
+  Width="280" Height="400" VerticalAlignment="Top" Margin="0 10 0 0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="170"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                            <RowDefinition Height="40"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                            <Grid Grid.ColumnSpan="2" Background="#1ebbd7">
+                            <Image Source="/rtkios;component/assets/Foto-Mabrur.jpg" Margin="0 20 0 0" Height="100" VerticalAlignment="Top">
+                            <Image.Clip>
+                                <EllipseGeometry Center="37,50" RadiusX="35" RadiusY="50" />
+                            </Image.Clip>
+                        </Image>
+                            <TextBlock HorizontalAlignment="Center" Margin="0 130 0 0" FontSize="20" FontWeight="Bold">Mabrur</TextBlock>
+                        </Grid>
+
+                        <TextBlock Grid.Row="1" Grid.Column="0" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0 0 0">Nip</TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Margin="0 0 10 0" HorizontalAlignment="Right">41190058</TextBlock>
+
+                        <TextBlock Grid.Row="2" Grid.Column="0" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0 0 0">Jabatan</TextBlock>
+                        <TextBlock Grid.Row="2" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Margin="0 0 10 0" HorizontalAlignment="Right">CEO</TextBlock>
+
+                        <TextBlock Grid.Row="3" Grid.Column="0" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0 0 0">Tanggal Masuk</TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Margin="0 0 10 0" HorizontalAlignment="Right">10/10/2010</TextBlock>
+
+                        <TextBlock Grid.Row="4" Grid.Column="0" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" Margin="10 0 0 0">Jam Masuk</TextBlock>
+                        <TextBlock Grid.Row="4" Grid.Column="1" FontSize="14" VerticalAlignment="Center" Margin="0 0 10 0" HorizontalAlignment="Right">06:06:06</TextBlock>
+                    </Grid>
+                </materialDesign:Card>
+            </Grid>
+        </Grid>
+        </materialDesign:Card>
+    </Grid>
+</UserControl>
+
+    
